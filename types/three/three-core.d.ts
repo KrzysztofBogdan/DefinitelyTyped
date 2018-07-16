@@ -5535,11 +5535,15 @@ export class WebGLRenderer implements Renderer {
 
     getSize(): { width: number; height: number; };
 
+	getDrawingBufferSize(): { width: number; height: number; };
+	setDrawingBufferSize(width: number, height: number, pixelRatio: number): void;
+	
     /**
      * Resizes the output canvas to (width, height), and also sets the viewport to fit that size, starting in (0, 0).
      */
     setSize(width: number, height: number, updateStyle?: boolean): void;
 
+	getCurrentViewport(): Vector4;
     /**
      * Sets the viewport to render from (x, y) to (x + width, y + height).
      */
